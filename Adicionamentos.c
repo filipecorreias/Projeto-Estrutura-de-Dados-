@@ -121,10 +121,11 @@ clientes* LerClientes() {
 	FILE* fp = fopen("clientes.txt", "r");
 
 
-	if (fp != NULL) {
+	if (fp == NULL) {
 		//printf("Erro ao abrir o arquivo. Codigo de erro: %d\n");
 		//exit(1);
-		printf("deu certo");
+		/*printf("deu certo");*/
+		exit(0);
 	}
 
 	int cod,fiscal,anos;
@@ -135,14 +136,14 @@ clientes* LerClientes() {
 
 	while (!feof(fp))
 	{
-		printf("entrou");
+		/*printf("entrou");*/
 		fscanf(fp, "%d;%[^;];%d;%d;%f;%[^\n]\n", &cod, pessoa, &fiscal, &anos, &valor, lugar);
-		printf("%d", cod);
-		printf("%s", pessoa);
-		printf("%d", fiscal);
-		printf("%d", anos);
-		printf("%.2f", valor);
-		printf("%s", lugar);
+		//printf("%d", cod);
+		//printf("%s", pessoa);
+		//printf("%d", fiscal);
+		//printf("%d", anos);
+		//printf("%.2f", valor);
+		//printf("%s", lugar);
 		aux = NovoCliente(aux, cod, pessoa, fiscal, anos, lugar);
 	}
 	fclose(fp);
