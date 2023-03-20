@@ -35,6 +35,7 @@ void MenuCliente() {
 		//printf("%d", valor);
 
 		if (valor == 1) {
+			system("cls");
 			EscolhasClientes();
 		}
 		else {
