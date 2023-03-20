@@ -63,5 +63,3 @@ void SalvarClientesFILE(clientes* dados);
 
 //Leitura de Clientes
 clientes* LerClientes();
-
-
